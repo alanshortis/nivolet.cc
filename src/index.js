@@ -1,5 +1,5 @@
 import React from "react";
 import { render } from "react-dom";
-import Map from "./components/Map";
+import Index from "./layouts/Index";
 
-render(<Map />, document.getElementById("root"));
+render(<Index />, document.getElementById("root"));

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import mapboxgl from "mapbox-gl";
-import Reset from "../styles/Reset.js";
 import MapContainer from "../styles/MapContainer";
 
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_KEY;
@@ -29,20 +28,11 @@ class Map extends Component {
       });
     });
 
-    map.addControl(
-      new mapboxgl.AttributionControl({
-        compact: true,
-      })
-    );
+    map.addControl(new mapboxgl.AttributionControl({ compact: true }));
   }
 
   render() {
-    return (
-      <>
-        <Reset />
-        <MapContainer ref={el => (this.mapContainer = el)} />
-      </>
-    );
+    return <MapContainer ref={el => (this.mapContainer = el)} />;
   }
 }
 
