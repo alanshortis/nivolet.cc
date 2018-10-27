@@ -1,8 +1,13 @@
 import React, { Component } from "react";
 import mapboxgl from "mapbox-gl";
-import MapContainer from "../styles/MapContainer";
+import styled from "styled-components";
 
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_KEY;
+
+const MapContainer = styled.div`
+  width: 100vw;
+  height: calc(100vh - 50px);
+`;
 
 class Map extends Component {
   state = {
