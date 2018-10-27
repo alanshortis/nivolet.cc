@@ -19,6 +19,7 @@ class Map extends Component {
       style: process.env.REACT_APP_MAPBOX_STYLE,
       center,
       zoom,
+      attributionControl: false,
     });
 
     map.on("moveend", () => {
@@ -27,6 +28,12 @@ class Map extends Component {
         zoom: map.getZoom(),
       });
     });
+
+    map.addControl(
+      new mapboxgl.AttributionControl({
+        compact: true,
+      })
+    );
   }
 
   render() {
