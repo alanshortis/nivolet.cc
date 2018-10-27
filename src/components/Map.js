@@ -21,13 +21,6 @@ class Map extends Component {
       attributionControl: false,
     });
 
-    map.on("moveend", () => {
-      this.setState({
-        center: Object.values(map.getCenter()),
-        zoom: map.getZoom(),
-      });
-    });
-
     map.addControl(new mapboxgl.AttributionControl({ compact: true }));
   }
 
