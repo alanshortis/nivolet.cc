@@ -3,9 +3,9 @@ import styled from "styled-components";
 import { ReactComponent as NivoletLogo } from "../img/logo.svg";
 
 const LogoStyle = styled(NivoletLogo)`
-  height: 1.5rem;
+  height: 100%;
   path {
-    fill: #4b4d4e;
+    fill: #efefef;
   }
 `;
 

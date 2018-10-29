@@ -5,23 +5,20 @@ import Logo from "./Logo";
 
 const SiteHeader = styled.header`
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   height: 60px;
   background-color: #17191a;
-  padding: 0 1rem;
+  padding: 1rem;
   a {
     position: relative;
     color: white;
     margin-left: 2rem;
     text-decoration: none;
     text-transform: uppercase;
-    margin-top: 6px;
-    color: #4b4d4e;
-    &.active:before {
-      position: absolute;
-      bottom: -10px;
-      left: 50%;
-      content: ".";
+    color: #666666;
+    line-height: 0.7;
+    &.active {
+      color: #efefef;
     }
   }
 `;
@@ -29,10 +26,12 @@ const SiteHeader = styled.header`
 const Header = () => (
   <SiteHeader>
     <Logo />
-    <NavLink exact to="/">
-      Map
-    </NavLink>
-    <NavLink to="/about">About</NavLink>
+    <nav>
+      <NavLink exact to="/">
+        Map
+      </NavLink>
+      <NavLink to="/about">About</NavLink>
+    </nav>
   </SiteHeader>
 );
 
