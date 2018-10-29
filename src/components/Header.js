@@ -2,13 +2,18 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import Logo from "./Logo";
+import { measurements } from "../styles/settings";
 
 const SiteHeader = styled.header`
   display: flex;
-  align-items: flex-end;
-  height: 60px;
+  height: ${measurements.headerHeight};
   background-color: #17191a;
-  padding: 1rem;
+  padding: ${measurements.contentMargin};
+  nav {
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+  }
   a {
     position: relative;
     color: white;
@@ -16,7 +21,8 @@ const SiteHeader = styled.header`
     text-decoration: none;
     text-transform: uppercase;
     color: #666666;
-    line-height: 0.7;
+    font-size: 0.9rem;
+    line-height: 0.9em;
     &.active {
       color: #efefef;
     }

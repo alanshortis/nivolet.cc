@@ -1,16 +1,14 @@
 export const font = {
-  sans: "Noway",
+  sans: "Roboto",
   weight: 300,
-  weightBoldd: 500,
+  bold: 500,
 };
 
-// export const color = {
-//   type: 1,
-//   typeLight: 1,
-//   background: 1,
-//   header: 0,
-// }
+export const type = {
+  baseSize: "18px",
+};
 
 export const measurements = {
-  headerHeight: "60px",
+  headerHeight: "4.5rem",
+  contentMargin: "1.5rem",
 };

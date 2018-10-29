@@ -1,24 +1,10 @@
 import { createGlobalStyle } from "styled-components";
-import { font } from "./settings";
-import { NowayWoff } from "../fonts/Noway-Light.woff";
-import { NowayWoff2 } from "../fonts/Noway-Light.woff2";
-import { NowayRegularWoff } from "../fonts/Noway-Regular.woff";
-import { NowayRegularWoff2 } from "../fonts/Noway-Regular.woff2";
+import { font, type } from "./settings";
 
 const Global = createGlobalStyle`
-  @font-face {
-    font-family: ${font.sans};
-    src: url(${NowayWoff}) format('woff2'), url(${NowayWoff2}) format('woff');
-    font-weight: ${font.weight};
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: ${font.sans};
-    src: url(${NowayRegularWoff}) format('woff2'), url(${NowayRegularWoff2}) format('woff');
-    font-weight: ${font.weightBold};
-    font-style: normal;
-  }
+  @import url(
+    'https://fonts.googleapis.com/css?family=Roboto:${font.weight},${font.bold}'
+  );
 
   * {
     box-sizing: border-box;
@@ -54,7 +40,8 @@ const Global = createGlobalStyle`
   body {
     min-height: 100%;
     box-sizing: border-box;
-    font-family: ${font.sans};
+    font-size: ${type.baseSize};
+    font-family: ${font.sans}, sans-serif;
     font-weight: ${font.weight};
   }
 `;
