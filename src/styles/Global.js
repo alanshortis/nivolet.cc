@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { font, type } from "./settings";
+import { font, type, measurements } from "./settings";
 
 const Global = createGlobalStyle`
   @import url(
@@ -43,6 +43,27 @@ const Global = createGlobalStyle`
     font-size: ${type.baseSize};
     font-family: ${font.sans}, sans-serif;
     font-weight: ${font.weight};
+    color: #17191a;
+    background-color: #eeeeee;
+  }
+
+  h1 {
+    font-weight: ${font.bold};
+    text-transform: uppercase;
+    margin-bottom: calc(${measurements.contentMargin} / 4);
+  }
+
+  p {
+    margin-bottom: ${measurements.contentMargin};
+  }
+
+  a {
+    color: #dd6969;
+    text-decoration: none;
+  }
+
+  strong {
+    font-weight: ${font.bold};
   }
 `;
 

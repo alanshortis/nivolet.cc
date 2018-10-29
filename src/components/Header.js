@@ -24,7 +24,7 @@ const SiteHeader = styled.header`
     font-size: 0.9rem;
     line-height: 0.9em;
     &.active {
-      color: #efefef;
+      color: #dd6969;
     }
   }
 `;
