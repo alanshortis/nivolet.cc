@@ -1,0 +1,415 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.407875, 45.064168]
+      },
+      "properties": {
+        "name": "Col du Galibier"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.735046, 44.820034]
+      },
+      "properties": {
+        "name": "Col d'Izoard"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.444618, 45.20269]
+      },
+      "properties": {
+        "name": "Col du Télégraphe"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.071451, 45.093659]
+      },
+      "properties": {
+        "name": "L'Alpe d'Huez"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.175527, 45.239596]
+      },
+      "properties": {
+        "name": "Col du Glandon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.337118, 45.210508]
+      },
+      "properties": {
+        "name": "Col du Mollard"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.337118, 45.210508]
+      },
+      "properties": {
+        "name": "Col du Mollard"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.262031, 45.254208]
+      },
+      "properties": {
+        "name": "La Toussuire"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.262031, 45.254208]
+      },
+      "properties": {
+        "name": "La Toussuire"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.35658, 45.343714]
+      },
+      "properties": {
+        "name": "Col du Chaussy"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.030859, 45.417137]
+      },
+      "properties": {
+        "name": "Col de l'Iseran"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.672584, 45.229213]
+      },
+      "properties": {
+        "name": "l'Orgère"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.407958, 45.28434]
+      },
+      "properties": {
+        "name": "Montdenis"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.821269, 45.660508]
+      },
+      "properties": {
+        "name": "Mont du Chat"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.84789, 45.692595]
+      },
+      "properties": {
+        "name": "Col du Chat"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.67828, 46.011904]
+      },
+      "properties": {
+        "name": "Col de Pierre Carrée"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.712899, 46.129635]
+      },
+      "properties": {
+        "name": "Col de Joux Plane"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.46485, 45.87231]
+      },
+      "properties": {
+        "name": "Col des Aravis"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.475424, 45.992211]
+      },
+      "properties": {
+        "name": "Col de la Columbière"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.278305, 44.173562]
+      },
+      "properties": {
+        "name": "Mont Ventoux"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.129439, 44.141183]
+      },
+      "properties": {
+        "name": "Col de la Madeleine"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.068374, 44.168633]
+      },
+      "properties": {
+        "name": "Col de Suzette"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.225963, 43.977127]
+      },
+      "properties": {
+        "name": "Col de Murs"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.096418, 44.179442]
+      },
+      "properties": {
+        "name": "Col de la Chaine"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.286199, 43.997426]
+      },
+      "properties": {
+        "name": "Col de la Ligne"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.329848, 44.093088]
+      },
+      "properties": {
+        "name": "Col Notre Dame des Abeilles"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.346039, 44.192804]
+      },
+      "properties": {
+        "name": "Col des Aires"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-5.702925, 57.413881]
+      },
+      "properties": {
+        "name": "Bealach na Bà"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-2.45049, 54.68381]
+      },
+      "properties": {
+        "name": "Great Dun Fell"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.854452, 53.531287]
+      },
+      "properties": {
+        "name": "Holme Moss"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.868992, 53.432902]
+      },
+      "properties": {
+        "name": "Snake Pass"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.375584, 45.434947]
+      },
+      "properties": {
+        "name": "Col de la Madeleine"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.067095, 49.912768]
+      },
+      "properties": {
+        "name": "Bourscheid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.930516, 49.890415]
+      },
+      "properties": {
+        "name": "Eschdorf"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.174979, 49.947913]
+      },
+      "properties": {
+        "name": "Mont Saint Nicolas"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.201589, 49.977394]
+      },
+      "properties": {
+        "name": "Keppeshausen"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.007135, 49.964979]
+      },
+      "properties": {
+        "name": "Alschend"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.055246, 49.936691]
+      },
+      "properties": {
+        "name": "Schlindermanderscheid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-5.639922, 57.571953]
+      },
+      "properties": {
+        "name": "Diabaig"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-2.204778, 54.355226]
+      },
+      "properties": {
+        "name": "Buttertubs Pass"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.999929, 53.244052]
+      },
+      "properties": {
+        "name": "Cat and Fiddle Pass"
+      }
+    }
+  ]
+}
