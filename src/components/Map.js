@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import mapboxgl from "mapbox-gl";
 import styled from "styled-components";
+import { Helmet } from "react-helmet";
 import { measurements } from "../styles/settings";
 
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_KEY;
@@ -31,7 +32,14 @@ class Map extends Component {
   }
 
   render() {
-    return <MapContainer ref={el => (this.mapContainer = el)} />;
+    return (
+      <>
+        <Helmet>
+          <title>Nivolet &middot; Map</title>
+        </Helmet>
+        <MapContainer ref={el => (this.mapContainer = el)} />
+      </>
+    );
   }
 }
 
