@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
-import { font, type, measurements } from "./settings";
+import { font, type } from "./settings";
+import typography from "./typography";
 
 const Global = createGlobalStyle`
   @import url(
@@ -47,24 +48,8 @@ const Global = createGlobalStyle`
     background-color: #eeeeee;
   }
 
-  h1 {
-    font-weight: ${font.bold};
-    text-transform: uppercase;
-    margin-bottom: calc(${measurements.contentMargin} / 4);
-  }
+  ${typography}
 
-  p {
-    margin-bottom: ${measurements.contentMargin};
-  }
-
-  a {
-    color: #dd6969;
-    text-decoration: none;
-  }
-
-  strong {
-    font-weight: ${font.bold};
-  }
 `;
 
 export default Global;
