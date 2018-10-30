@@ -3,7 +3,6 @@ import mapboxgl from "mapbox-gl";
 import styled from "styled-components";
 import { Helmet } from "react-helmet";
 import { measurements } from "../styles/settings";
-import climbs from "../data/climbs.json";
 import initMap from "../functions/initMap";
 
 const MapContainer = styled.div`
@@ -12,13 +11,17 @@ const MapContainer = styled.div`
 `;
 
 class Map extends Component {
-  componentDidMount() {
+  async componentDidMount() {
     mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_KEY;
     const map = new mapboxgl.Map({
       container: this.mapContainer,
       style: process.env.REACT_APP_MAPBOX_STYLE,
       attributionControl: false,
     });
+
+    // prettier-ignore
+    const reqUrl = `https://api.mapbox.com/datasets/v1/${process.env.REACT_APP_MAPBOX_USERNAME}/${process.env.REACT_APP_MAPBOX_DATASET_ID}/features?access_token=${process.env.REACT_APP_MAPBOX_KEY}`;
+    const climbs = await fetch(reqUrl).then(res => res.json());
 
     initMap(map, climbs);
   }
