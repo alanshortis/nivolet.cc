@@ -390,6 +390,16 @@
       "properties": {
         "name": "Cat and Fiddle Pass"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.168402, 44.208957]
+      },
+      "properties": {
+        "name": "Col de Veaux"
+      }
     }
   ]
 }
