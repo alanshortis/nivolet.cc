@@ -27,7 +27,7 @@ class Map extends Component {
         type: "geojson",
         data: climbs,
         cluster: true,
-        clusterMaxZoom: 14,
+        clusterMaxZoom: 12,
       });
 
       map.addLayer({
