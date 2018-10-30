@@ -65,26 +65,6 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [6.337118, 45.210508]
-      },
-      "properties": {
-        "name": "Col du Mollard"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [6.262031, 45.254208]
-      },
-      "properties": {
-        "name": "La Toussuire"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
         "coordinates": [6.262031, 45.254208]
       },
       "properties": {
@@ -409,6 +389,16 @@
       },
       "properties": {
         "name": "Cat and Fiddle Pass"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.168402, 44.208957]
+      },
+      "properties": {
+        "name": "Col de Veaux"
       }
     }
   ]
