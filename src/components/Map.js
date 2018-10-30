@@ -62,7 +62,7 @@ class Map extends Component {
         filter: ["!", ["has", "point_count"]],
         paint: {
           "circle-color": color.highlight,
-          "circle-radius": 5,
+          "circle-radius": 10,
         },
       });
 
