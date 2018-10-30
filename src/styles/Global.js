@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { font, type } from "./settings";
+import { font, type, color } from "./settings";
 import typography from "./typography";
 
 const Global = createGlobalStyle`
@@ -44,8 +44,8 @@ const Global = createGlobalStyle`
     font-size: ${type.baseSize};
     font-family: ${font.sans}, sans-serif;
     font-weight: ${font.weight};
-    color: #17191a;
-    background-color: #eeeeee;
+    color: ${color.type};
+    background-color: ${color.background};
   }
 
   ${typography}

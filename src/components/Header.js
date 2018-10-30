@@ -2,12 +2,12 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import Logo from "./Logo";
-import { measurements } from "../styles/settings";
+import { measurements, color } from "../styles/settings";
 
 const SiteHeader = styled.header`
   display: flex;
   height: ${measurements.headerHeight};
-  background-color: #17191a;
+  background-color: ${color.header};
   padding: ${measurements.contentMargin};
   nav {
     display: flex;
@@ -17,14 +17,14 @@ const SiteHeader = styled.header`
   a {
     position: relative;
     color: white;
-    margin-left: 2rem;
+    margin-left: ${measurements.contentMargin};
     text-decoration: none;
     text-transform: uppercase;
-    color: #666666;
+    color: ${color.typeMid};
     font-size: 0.9rem;
     line-height: 0.9em;
     &.active {
-      color: #dd6969;
+      color: ${color.highlight};
     }
   }
 `;

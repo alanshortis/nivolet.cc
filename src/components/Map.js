@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import mapboxgl from "mapbox-gl";
 import styled from "styled-components";
 import { Helmet } from "react-helmet";
-import { measurements } from "../styles/settings";
+import { measurements, color } from "../styles/settings";
 import climbs from "../data/climbs.json";
 
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_KEY;
@@ -10,10 +10,6 @@ mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_KEY;
 const MapContainer = styled.div`
   width: 100vw;
   height: calc(100vh - ${measurements.headerHeight});
-  .mapboxgl-popup {
-    font-family: "Roboto", sans-serif;
-    padding: 1.5rem;
-  }
 `;
 
 class Map extends Component {
@@ -40,7 +36,7 @@ class Map extends Component {
         source: "climbs",
         filter: ["has", "point_count"],
         paint: {
-          "circle-color": "#4081AA",
+          "circle-color": color.complement,
           "circle-radius": 20,
         },
       });
@@ -55,7 +51,7 @@ class Map extends Component {
           "text-size": 14,
         },
         paint: {
-          "text-color": "#ffffff",
+          "text-color": color.typeLight,
         },
       });
 
@@ -65,7 +61,7 @@ class Map extends Component {
         source: "climbs",
         filter: ["!", ["has", "point_count"]],
         paint: {
-          "circle-color": "#dd6969",
+          "circle-color": color.highlight,
           "circle-radius": 5,
         },
       });
