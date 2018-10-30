@@ -10,19 +10,9 @@ mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_KEY;
 const MapContainer = styled.div`
   width: 100vw;
   height: calc(100vh - ${measurements.headerHeight});
-  .marker {
-    background-color: #dd6969;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    cursor: pointer;
-  }
   .mapboxgl-popup {
-    max-width: 200px;
-  }
-  .mapboxgl-popup-content {
-    text-align: center;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Roboto", sans-serif;
+    padding: 1.5rem;
   }
 `;
 
@@ -34,28 +24,96 @@ class Map extends Component {
       attributionControl: false,
     });
 
-    map.addControl(new mapboxgl.AttributionControl({ compact: true }));
+    map.on("load", () => {
+      map.addControl(new mapboxgl.AttributionControl({ compact: true }));
 
-    climbs.features.forEach(marker => {
-      const el = document.createElement("div");
-      el.className = "marker";
-      new mapboxgl.Marker(el)
-        .setLngLat(marker.geometry.coordinates)
-        .setPopup(
-          new mapboxgl.Popup({ offset: 10 }).setHTML(
-            `<h3>${marker.properties.name}</h3>`
-          )
-        )
-        .addTo(map);
+      map.addSource("climbs", {
+        type: "geojson",
+        data: climbs,
+        cluster: true,
+        clusterMaxZoom: 14,
+      });
+
+      map.addLayer({
+        id: "clusters",
+        type: "circle",
+        source: "climbs",
+        filter: ["has", "point_count"],
+        paint: {
+          "circle-color": "#4081AA",
+          "circle-radius": 20,
+        },
+      });
+
+      map.addLayer({
+        id: "cluster-count",
+        type: "symbol",
+        source: "climbs",
+        filter: ["has", "point_count"],
+        layout: {
+          "text-field": "{point_count_abbreviated}",
+          "text-size": 14,
+        },
+        paint: {
+          "text-color": "#ffffff",
+        },
+      });
+
+      map.addLayer({
+        id: "climb",
+        type: "circle",
+        source: "climbs",
+        filter: ["!", ["has", "point_count"]],
+        paint: {
+          "circle-color": "#dd6969",
+          "circle-radius": 5,
+        },
+      });
+
+      // Handle clicks of clusters.
+      map.on("click", "clusters", e => {
+        const features = map.queryRenderedFeatures(e.point, {
+          layers: ["clusters"],
+        });
+        const clusterId = features[0].properties.cluster_id;
+        map
+          .getSource("climbs")
+          .getClusterExpansionZoom(clusterId, (err, zoom) => {
+            if (err) return;
+
+            map.easeTo({
+              center: features[0].geometry.coordinates,
+              zoom: zoom,
+            });
+          });
+      });
+
+      // Change the cursor to a pointer over clusters and climbs.
+      map.on("mousemove", e => {
+        const features = map.queryRenderedFeatures(e.point, {
+          layers: ["climb", "clusters"],
+        });
+        map.getCanvas().style.cursor = features.length ? "pointer" : "";
+      });
+
+      // Show a popup with the climb name on click.
+      map.on("click", "climb", e => {
+        const coordinates = e.features[0].geometry.coordinates.slice();
+        const name = `<h3>${e.features[0].properties.name}</h3>`;
+
+        new mapboxgl.Popup()
+          .setLngLat(coordinates)
+          .setHTML(name)
+          .addTo(map);
+      });
+
+      // Fit map to bounds of climb locations.
+      const bounds = new mapboxgl.LngLatBounds();
+      climbs.features.forEach(feature => {
+        bounds.extend(feature.geometry.coordinates);
+      });
+      map.fitBounds(bounds, { padding: 50 });
     });
-
-    const bounds = new mapboxgl.LngLatBounds();
-
-    climbs.features.forEach(feature => {
-      bounds.extend(feature.geometry.coordinates);
-    });
-
-    map.fitBounds(bounds, { padding: 50 });
   }
 
   render() {
