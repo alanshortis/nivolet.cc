@@ -85,7 +85,9 @@ export default function initMap(map, climbs) {
       const coordinates = e.features[0].geometry.coordinates.slice();
       const name = `<h3>${e.features[0].properties.name}</h3>`;
 
-      new mapboxgl.Popup()
+      new mapboxgl.Popup({
+        offset: [4, -15],
+      })
         .setLngLat(coordinates)
         .setHTML(name)
         .addTo(map);
