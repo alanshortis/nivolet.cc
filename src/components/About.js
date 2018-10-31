@@ -15,7 +15,7 @@ const About = () => (
       <title>Nivolet &middot; About</title>
     </Helmet>
     <AboutSection>
-      <h1>Right now</h1>
+      <h2>Right now</h2>
       <p>
         <strong>Nivolet</strong> is nothing more than a list of notable cycling
         climbs that have been completed by{" "}
@@ -23,7 +23,7 @@ const About = () => (
         particularly interesting to anyone else.
       </p>
 
-      <h1>Eventually</h1>
+      <h2>Eventually</h2>
       <p>
         There are many climbs that are regularly used for racing, and these
         climbs become destinations and bucket list items for cyclicts all over

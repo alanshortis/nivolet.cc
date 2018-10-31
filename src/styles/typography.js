@@ -2,7 +2,7 @@ import { css } from "styled-components";
 import { font, measurements } from "./settings";
 
 const typography = css`
-  h1 {
+  h2 {
     font-size: 1.25rem;
     font-weight: ${font.bold};
     text-transform: uppercase;
