@@ -11,7 +11,14 @@ const MapContainer = styled.div`
 `;
 
 class Map extends Component {
-  async componentDidMount() {
+  async getClimbs(map) {
+    // prettier-ignore
+    const reqUrl = `https://api.mapbox.com/datasets/v1/${process.env.REACT_APP_MAPBOX_USERNAME}/${process.env.REACT_APP_MAPBOX_DATASET_ID}/features?access_token=${process.env.REACT_APP_MAPBOX_KEY}`;
+    const climbs = await fetch(reqUrl).then(res => res.json());
+    initMap(map, climbs);
+  }
+
+  componentDidMount() {
     mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_KEY;
     const map = new mapboxgl.Map({
       container: this.mapContainer,
@@ -19,11 +26,7 @@ class Map extends Component {
       attributionControl: false,
     });
 
-    // prettier-ignore
-    const reqUrl = `https://api.mapbox.com/datasets/v1/${process.env.REACT_APP_MAPBOX_USERNAME}/${process.env.REACT_APP_MAPBOX_DATASET_ID}/features?access_token=${process.env.REACT_APP_MAPBOX_KEY}`;
-    const climbs = await fetch(reqUrl).then(res => res.json());
-
-    initMap(map, climbs);
+    this.getClimbs(map);
   }
 
   render() {

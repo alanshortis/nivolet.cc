@@ -1,5 +1,6 @@
 import mapboxgl from "mapbox-gl";
 import { color } from "../styles/settings";
+import pin from "../img/pin.png";
 
 export default function initMap(map, climbs) {
   map.on("load", () => {
@@ -37,14 +38,19 @@ export default function initMap(map, climbs) {
       },
     });
 
+    map.loadImage(pin, (error, image) => {
+      if (error) throw error;
+      map.addImage("pin", image);
+    });
+
     map.addLayer({
       id: "climb",
-      type: "circle",
+      type: "symbol",
       source: "climbs",
       filter: ["!", ["has", "point_count"]],
-      paint: {
-        "circle-color": color.highlight,
-        "circle-radius": 10,
+      layout: {
+        "icon-image": "pin",
+        "icon-size": 0.25,
       },
     });
 
@@ -79,7 +85,9 @@ export default function initMap(map, climbs) {
       const coordinates = e.features[0].geometry.coordinates.slice();
       const name = `<h3>${e.features[0].properties.name}</h3>`;
 
-      new mapboxgl.Popup()
+      new mapboxgl.Popup({
+        offset: [4, -15],
+      })
         .setLngLat(coordinates)
         .setHTML(name)
         .addTo(map);

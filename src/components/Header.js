@@ -9,15 +9,14 @@ const SiteHeader = styled.header`
   height: ${measurements.headerHeight};
   background-color: ${color.header};
   padding: ${measurements.contentMargin};
-  nav {
-    display: flex;
-    align-items: flex-end;
-    height: 100%;
-  }
+`;
+
+const SiteNav = styled.nav`
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  margin-left: ${measurements.contentMargin};
   a {
-    position: relative;
-    color: white;
-    margin-left: ${measurements.contentMargin};
     text-decoration: none;
     text-transform: uppercase;
     color: ${color.typeMid};
@@ -26,18 +25,21 @@ const SiteHeader = styled.header`
     &.active {
       color: ${color.highlight};
     }
+    + a {
+      margin-left: ${measurements.contentMargin};
+    }
   }
 `;
 
 const Header = () => (
   <SiteHeader>
     <Logo />
-    <nav>
+    <SiteNav>
       <NavLink exact to="/">
         Map
       </NavLink>
       <NavLink to="/about">About</NavLink>
-    </nav>
+    </SiteNav>
   </SiteHeader>
 );
 
