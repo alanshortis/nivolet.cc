@@ -1,7 +1,7 @@
 import mapboxgl from "mapbox-gl";
 import { color } from "../styles/settings";
-import { climbCat } from "./utils";
 import pin from "../img/pin.png";
+import Popup from "../components/Popup";
 
 export default function initMap(map, climbs) {
   map.on("load", () => {
@@ -83,18 +83,13 @@ export default function initMap(map, climbs) {
 
     // Show a popup with the climb name on click.
     map.on("click", "climb", e => {
-      const { name, grade, length } = e.features[0].properties;
       const coordinates = e.features[0].geometry.coordinates.slice();
-      const details = `
-        <h3>${name}</h3>
-        <p class="category">${climbCat(grade, length)}</p>
-      `;
 
       new mapboxgl.Popup({
         offset: [4, -15],
       })
         .setLngLat(coordinates)
-        .setHTML(details)
+        .setHTML(Popup(e.features[0].properties))
         .addTo(map);
     });
 
