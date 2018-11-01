@@ -24,6 +24,8 @@ class Map extends Component {
       container: this.mapContainer,
       style: process.env.REACT_APP_MAPBOX_STYLE,
       attributionControl: false,
+      center: [0, 51.479574],
+      zoom: 5,
     });
 
     this.getClimbs(map);
