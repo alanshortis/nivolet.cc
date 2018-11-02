@@ -20,8 +20,8 @@ export default function initMap(map, climbs) {
       source: "climbs",
       filter: ["has", "point_count"],
       paint: {
-        "circle-color": color.complement,
-        "circle-radius": 20,
+        "circle-color": color.cluster,
+        "circle-radius": 18,
       },
     });
 
@@ -35,7 +35,7 @@ export default function initMap(map, climbs) {
         "text-size": 14,
       },
       paint: {
-        "text-color": color.typeLight,
+        "text-color": color.type,
       },
     });
 
