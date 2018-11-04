@@ -9,6 +9,10 @@ const typography = css`
     margin-bottom: calc(${measurements.contentMargin} / 4);
   }
 
+  h3 {
+    font-size: 1rem;
+  }
+
   p {
     margin-bottom: ${measurements.contentMargin};
   }

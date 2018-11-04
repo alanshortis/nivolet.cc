@@ -11,6 +11,7 @@ export const type = {
 export const measurements = {
   headerHeight: "4.5rem",
   contentMargin: "1.5rem",
+  radius: "3px",
 };
 
 export const color = {
@@ -20,5 +21,5 @@ export const color = {
   typeLight: "hsl(0, 0%, 93%)",
   typeMid: "hsl(0, 0%, 40%)",
   highlight: "hsl(0, 63%, 64%)",
-  complement: "hsl(203, 45%, 46%)",
+  cluster: "hsl(0, 0%, 93%)",
 };

@@ -19,8 +19,8 @@ export default function initMap(map, climbs) {
       source: "climbs",
       filter: ["has", "point_count"],
       paint: {
-        "circle-color": color.complement,
-        "circle-radius": 20,
+        "circle-color": color.cluster,
+        "circle-radius": 18,
       },
     });
 
@@ -34,7 +34,7 @@ export default function initMap(map, climbs) {
         "text-size": 14,
       },
       paint: {
-        "text-color": color.typeLight,
+        "text-color": color.type,
       },
     });
 
@@ -83,13 +83,11 @@ export default function initMap(map, climbs) {
     // Show a popup with the climb name on click.
     map.on("click", "climb", e => {
       const coordinates = e.features[0].geometry.coordinates.slice();
-      const name = `<h3>${e.features[0].properties.name}</h3>`;
+      const { name } = e.features[0].properties;
 
-      new mapboxgl.Popup({
-        offset: [4, -15],
-      })
+      new mapboxgl.Popup()
         .setLngLat(coordinates)
-        .setHTML(name)
+        .setHTML(`<h3>${name}</h3>`)
         .addTo(map);
     });
 
