@@ -2,12 +2,30 @@ import React, { Component } from "react";
 import mapboxgl from "mapbox-gl";
 import styled from "styled-components";
 import { Helmet } from "react-helmet";
-import { measurements } from "../styles/settings";
+import { measurements, color } from "../styles/settings";
 import initMap from "../functions/initMap";
 
 const MapContainer = styled.div`
   width: 100vw;
   height: calc(100vh - ${measurements.headerHeight});
+  .mapboxgl-popup {
+    width: 200px;
+  }
+  .mapboxgl-popup-tip {
+    border-top-color: ${color.background};
+    border-bottom-color: ${color.background};
+  }
+  .mapboxgl-popup-content {
+    background-color: ${color.background};
+    border-radius: ${measurements.radius};
+  }
+  .mapboxgl-popup-close-button {
+    padding: 0.25rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    color: ${color.type};
+    border-bottom-left-radius: ${measurements.radius};
+  }
 `;
 
 class Map extends Component {

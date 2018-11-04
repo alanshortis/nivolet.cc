@@ -11,6 +11,7 @@ export const type = {
 export const measurements = {
   headerHeight: "4.5rem",
   contentMargin: "1.5rem",
+  radius: "3px",
 };
 
 export const color = {
