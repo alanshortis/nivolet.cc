@@ -14,7 +14,9 @@ const typography = css`
   }
 
   p {
-    margin-bottom: ${measurements.contentMargin};
+    &:not(:last-of-type) {
+      margin-bottom: ${measurements.contentMargin};
+    }
   }
 
   a {

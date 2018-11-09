@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import mapboxgl from "mapbox-gl";
 import styled from "styled-components";
 import { Helmet } from "react-helmet";
-import { measurements, color } from "../styles/settings";
+import { measurements, color, font } from "../styles/settings";
 import initMap from "../functions/initMap";
 
 const MapContainer = styled.div`
@@ -15,9 +15,29 @@ const MapContainer = styled.div`
     border-top-color: ${color.background};
     border-bottom-color: ${color.background};
   }
+  .mapboxgl-popup-anchor-left {
+    .mapboxgl-popup-tip {
+      border-color: transparent;
+      border-right-color: ${color.background};
+    }
+  }
+  .mapboxgl-popup-anchor-right {
+    .mapboxgl-popup-tip {
+      border-color: transparent;
+      border-left-color: ${color.background};
+    }
+  }
   .mapboxgl-popup-content {
     background-color: ${color.background};
-    border-radius: ${measurements.radius};
+    border-radius: 0;
+    padding: calc(${measurements.contentMargin} / 4);
+    font-family: ${font.sans};
+    p {
+      margin: 0;
+    }
+    .cat {
+      color: ${color.highlight};
+    }
   }
   .mapboxgl-popup-close-button {
     padding: 0.25rem;
