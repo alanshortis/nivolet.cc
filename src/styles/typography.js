@@ -5,7 +5,6 @@ const typography = css`
   h2 {
     font-size: 1.25rem;
     font-weight: ${font.bold};
-    text-transform: uppercase;
     margin-bottom: calc(${measurements.contentMargin} / 4);
   }
 
@@ -13,8 +12,17 @@ const typography = css`
     font-size: 1rem;
   }
 
-  p {
-    margin-bottom: ${measurements.contentMargin};
+  p,
+  ol {
+    &:not(:last-of-type),
+    &:only-of-type {
+      margin-bottom: ${measurements.contentMargin};
+    }
+  }
+
+  ol li {
+    margin-left: ${measurements.contentMargin};
+    list-style: disc;
   }
 
   a {
