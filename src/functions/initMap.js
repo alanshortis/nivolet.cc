@@ -84,15 +84,26 @@ export default function initMap(map, climbs) {
     // Show a popup with the climb name on click.
     map.on("click", "climb", e => {
       const coordinates = e.features[0].geometry.coordinates.slice();
-      const { name, length, grade, height } = e.features[0].properties;
+      const {
+        name,
+        length,
+        grade,
+        maxGrade,
+        height,
+        cobbled,
+      } = e.features[0].properties;
 
       new mapboxgl.Popup()
         .setLngLat(coordinates)
         .setHTML(
-          `<p class="cat">${climbCat(length, grade)}</p>
+          `<p class="cat">${climbCat(length, grade)}${
+            cobbled ? ", <abbr title='Cobbled'> C</abbr>" : ""
+          }</p>
           <h3>${name}</h3>
-          <p>${(length / 1000).toFixed(1)}km</p>
-          <p>${height.toLocaleString()}m</p>`
+          <p><strong>Length:</strong> ${(length / 1000).toFixed(1)}km</p>
+          <p><strong>Height:</strong> ${height.toLocaleString()}m</p>
+          <p><strong>Avg grade:</strong> ${grade}%</p>
+          <p><strong>Max grade:</strong> ${maxGrade}%</p>`
         )
         .addTo(map);
     });
