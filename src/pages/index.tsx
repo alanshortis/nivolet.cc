@@ -1,5 +1,3 @@
-function HomePage() {
-  return <div>Welcome to Next.js!</div>
-}
+const Home: React.FC = () => <p>Nivolet</p>;
 
-export default HomePage
+export default Home;
