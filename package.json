@@ -1,0 +1,14 @@
+{
+  "name": "nivolet.cc",
+  "version": "2.0.0",
+  "author": "Alan Shortis",
+  "description": "A cycling website.",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alanshortis/nivolet.cc.git"
+  }
+}
