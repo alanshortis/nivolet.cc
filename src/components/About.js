@@ -21,11 +21,6 @@ const About = () => (
         that have been completed by <a href="https://short.is">Alan Shortis</a>.
         It's probably not particularly interesting to anyone else.
       </p>
-      <p>
-        Eventually, Nivolet aims to become a large and detailed catalogue of
-        lesser known cycling climbs - often very close to the legendary passes -
-        that deserve more attention.
-      </p>
     </AboutSection>
   </>
 );
